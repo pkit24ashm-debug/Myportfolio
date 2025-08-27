@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      padding-top: 70px; /* space for fixed navbar */
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">MyStore | Bootstrap Demo</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#product">Product</a></li>
+        <li class="nav-item"><a class="nav-link" href="#details">Details</a></li>
+        <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Featured Product -->
+<div id="product" class="container my-5">
+  <h2 class="text-center mb-4">Featured Product</h2>
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <img src="./image/headphone.jpeg" class="card-img-top" alt="Product">
+        <div class="card-body">
+          <h5 class="card-title">Wireless Headphones</h5>
+          <p class="card-text">$99.99 – High quality wireless headphones with noise cancellation.</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal">
+            View Details
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- About Product Section -->
+<div id="details" class="container my-5">
+  <h3 class="mb-3">About This Product</h3>
+  <p>
+    Our <strong>Wireless Headphones</strong> are designed for music lovers who want exceptional sound 
+    quality without the hassle of wires. Whether you are commuting, working out, or relaxing at home, 
+    these headphones deliver crystal clear sound and deep bass.
+  </p>
+  <ul>
+    <li>✅ Long-lasting 20-hour battery life</li>
+    <li>✅ Comfortable over-ear design</li>
+    <li>✅ Works with Android, iOS, and Windows</li>
+    <li>✅ Built-in microphone for calls</li>
+  </ul>
+</div>
+
+<!-- Product Modal -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="productModalLabel">Wireless Headphones</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <img src="./image/headphone.jpeg" class="img-fluid mb-3" alt="Product">
+        <p>Features include:</p>
+        <ul>
+          <li>Noise cancellation</li>
+          <li>20-hour battery life</li>
+          <li>Bluetooth 5.0</li>
+          <li>Lightweight & portable</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button class="btn btn-success">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Reviews Section -->
+<div id="reviews" class="container my-5">
+  <h3 class="text-center mb-4">Customer Reviews</h3>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card p-3 shadow-sm">
+        <h5>⭐️⭐️⭐️⭐️⭐️</h5>
+        <p>"Amazing sound quality! Best headphones I’ve bought this year."</p>
+        <small>- Alex</small>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card p-3 shadow-sm">
+        <h5>⭐️⭐️⭐️⭐️</h5>
+        <p>"Battery life is excellent, lasts me all week on one charge."</p>
+        <small>- Maria</small>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card p-3 shadow-sm">
+        <h5>⭐️⭐️⭐️⭐️⭐️</h5>
+        <p>"Very comfortable for long use and easy Bluetooth pairing."</p>
+        <small>- James</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ Accordion -->
+<div id="faq" class="container my-5">
+  <h3 class="text-center mb-3">Product FAQ</h3>
+  <div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="q1">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1">
+          Is there a warranty?
+        </button>
+      </h2>
+      <div id="a1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Yes! Comes with a 1-year manufacturer warranty.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="q2">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2">
+          Does it support Android and iOS?
+        </button>
+      </h2>
+      <div id="a2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Absolutely, it works with all Bluetooth-enabled devices.
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <a href="bootstrap.html" class="btn btn-secondary">← Back</a>
+</div>
+  
+<!-- Footer -->
+<footer class="bg-dark text-light text-center py-3 mt-5">
+  <p>© 2025 MyStore</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
